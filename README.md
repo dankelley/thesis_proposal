@@ -1,4 +1,10 @@
+---
+title: using the thesis_proposal latex package
+author: Dan Kelley and Christoph Renkl, Dalhousie University
+---
+
 # LaTeX style file for thesis proposals
+
 
 This directory contains a latex style that was designed to help students
 prepare MSc and PhD proposals for the Department of Oceanography at Dalhousie
