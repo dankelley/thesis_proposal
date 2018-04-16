@@ -1,0 +1,40 @@
+Version history
+
+Version 0.12
+-
+
+Version 0.11
+-
+
+Version 0.10
+- stop using package hyperref
+
+Version 0.9
+- improve aesthetics of sections and TOC
+- switch to () citation instead of [] citation, to match thesis style
+- put date after authors in bibliography
+- add 'in partial fulfillment' to front page
+
+Version 0.8
+- solve problem with cross-referencing appendices
+
+Version 0.7
+- allow for undefended proposals (fixing a bug pointed out by J. Mecking)
+
+Version 0.6
+- improve aesthetics, with help from L. Delaney
+
+Version 0.5
+- replace fancyheadings with fancyhdr (new name of package)
+
+Version 0.4
+- fix some errors
+
+Version 0.3
+- add \previousdegrees and page headings
+
+Version 0.2
+- use RoySoc styles; add committee structures to first page
+
+Version 0.1
+- first test
