@@ -1,6 +1,7 @@
 *latexmk
 *~
 *.swp
+
 myproposal.aux
 myproposal.bbl
 myproposal.blg
@@ -9,3 +10,4 @@ myproposal.log
 myproposal.out
 myproposal.pdf
 myproposal.toc
+

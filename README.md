@@ -82,24 +82,24 @@ to repeat these steps for any later updates to the Dalhousie thesis style sheet.
 The next step is to clone the dal-oce-thesis repository. In the terminal, type
 ```
 cd ~/texmf/tex/latex
-git clone https://github.com/christophrenkl/oceproposal.git oceproposal
+git clone https://github.com/dankelley/thesis_proposal.git thesis_proposal
 ```
 on Linux, or 
 ```
 cd ~/Library/texmf/tex/latex
-git clone https://github.com/christophrenkl/oceproposal.git oceproposal
+git clone https://github.com/dankelley/thesis_proposal.git thesis_proposal
 ```
 on MacOS.
 
 Finally, set up the bibliography style sheet, with
 ```
 cd ~/texmf/bibtex/bst
-ln -s ../../tex/latex/oceproposal/oceproposal.bst .
+ln -s ../../tex/latex/oceproposal/thesis_proposal.bst .
 ```
 on Linux or
 ```
 cd ~/Library/texmf/bibtex/bst
-ln -s ../../tex/latex/oceproposal/oceproposal.bst .
+ln -s ../../tex/latex/oceproposal/thesis_proposal.bst .
 ```
 on MacOS.
 
@@ -119,11 +119,11 @@ as you've set them up.
 
 If `dal-oce-thesis` gets updated, you may update your installation by doing
 ```
-cd ~/texmf/tex/latex/oceproposal
+cd ~/texmf/tex/latex/thesis_proposal
 ```
 on Linux or
 ```
-cd ~/Library/texmf/tex/latex/oceproposal
+cd ~/Library/texmf/tex/latex/thesis_proposal
 ```
 on MacOS, and then typing
 ```
