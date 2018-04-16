@@ -1,24 +1,20 @@
----
-title: using the thesis_proposal latex package
-author: Dan Kelley and Christoph Renkl, Dalhousie University
----
-
-# LaTeX style file for thesis proposals
-
+**LaTeX style file for thesis proposals**
 
 This directory contains a latex style that was designed to help students
 prepare MSc and PhD proposals for the Department of Oceanography at Dalhousie
-University. The department has no requirements on the formatting of these
-documents, so there's no need to use the style provided here. The point is just
-to save students a bit of time that might otherwise be spent learning how to
-format a bibliography or deciding whether to include committee members in the
-document.
+University. It has since been extended to be less Dalhousie-specific, and to
+include Honours thesis proposals also.
 
-Latex is quirky, so your first step should be to try to run the sample file
-named *myproposal.tex* on your machine. If you're on a unix machine, simply
-typing *make* in a terminal should create a file *myproposal.pdf*. If you're on
-another type of machine, or if you have a different workflow, just adjust
-things accordingly.
+The main purpose is to save students a bit of time that might otherwise be
+spent learning how to format a bibliography or deciding what elements they
+might want to include in the document. (For example, the style sheet suggests
+providing keywords and listing members of the examination committee.) As always
+with latex, the goal is to encourage the author to think about content, not
+appearance.
+
+If you are on a unix machine, simply typing *make* in a terminal should create
+a file *myproposal.pdf*. If you're on another type of machine, or if you have a
+different workflow, just adjust things accordingly.
 
 The thing most likely to give a problem is the inclusion of figures. If you use
 pdflatex, you'll probably want to use *pdf* figures.  Different versions of
@@ -43,12 +39,13 @@ skills may wish to contribute improvements either by contacting the author by
 email or by issuing a pull request on the github website
 (https://github.com/dankelley/thesis_proposal/pulls).
 
-**Dan Kelley, Dalhousie University Oceanography Graduate Coordinator 2009 to
-2017.** 
+*Dan Kelley, Dalhousie University Oceanography Graduate Coordinator 2009 to
+2017.*
 
-## Configuration
+**Configuration**
 
-### University logo
+*University logo*
+
 It is possible to put a university logo on the front page; with
 ```latex
 \documentclass{thesis_proposal}
@@ -60,7 +57,7 @@ first page if the file uses
 \documentclass[logo=logo-eagle]{thesis_proposal}
 ```
 
-## Installation
+**Installation**
 
 If you want to use the `thesis_proposal` package like any regular LaTeX package without
 copying the provided style sheets into the directory of your document, you may
@@ -69,7 +66,7 @@ depends on the operating system, and so some steps listed below are divided
 into Linux and MacOS (formerly OSX) variants; a procedure on Windows may be
 added if a user explains it to the developers.
 
-### Step 1: set up directories
+*Step 1: set up directories*
 
 Open a terminal and type
 ```
@@ -94,7 +91,7 @@ mkdir -p ~/Library/texmf/bibtex/bst
 on MacOS.
 
 
-### Step 2: clone the Dalhousie thesis repository
+*Step 2: clone the Dalhousie thesis repository*
 
 At this stage, you are set up for doing work with Latex, and you will not need
 to repeat these steps for any later updates to the Dalhousie thesis style sheet.
@@ -124,7 +121,7 @@ ln -s ../../tex/latex/thesis_proposal/thesis_proposal.bst .
 on MacOS.
 
 
-### Step 3. testing the setup
+*Step 3. testing the setup*
 
 You can test if your TeX distribution is able to find the class file and style
 sheets by typing in the terminal:
@@ -135,7 +132,7 @@ kpsewhich thesis_proposal.bst
 and verifying that both commands report the full path to the respective files,
 as you've set them up.
 
-## Updating the installation
+*Updating the installation*
 
 If `thesis_proposal` gets updated, you may update your installation by doing
 ```
