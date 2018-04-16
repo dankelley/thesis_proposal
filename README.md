@@ -32,7 +32,10 @@ Some options are available, and these are indicated in the sample file.
 Please note that this is an early version of the file, and so there are lots of
 possibilities for improvement. Please report problems and suggestions using the
 issues tab of the github website
-(https://github.com/dankelley/thesis_proposal/issues).
+(https://github.com/dankelley/thesis_proposal/issues).  Those with good github
+skills may wish to contribute improvements either by contacting the author by
+email or by issuing a pull request on the github website
+(https://github.com/dankelley/thesis_proposal/pulls).
 
 **Dan Kelley, Dalhousie University Oceanography Graduate Coordinator 2009 to
 2017.** 
