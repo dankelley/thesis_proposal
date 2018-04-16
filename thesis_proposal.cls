@@ -319,6 +319,21 @@
   {0.5ex \@plus 0.5ex \@minus 0.5ex}%
   {\raggedright\normalfont\normalsize\itshape}}
 
+% Appendix
+\renewcommand\appendix{\par
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \setcounter{table}{0}
+  \setcounter{figure}{0}
+  \setcounter{equation}{0}
+  \gdef\thetable{\Alph{table}}
+  \gdef\thefigure{\Alph{figure}}
+  \gdef\theequation{\Alph{section}-\arabic{equation}}
+  \section*{Appendix}
+  \gdef\thesection{\Alph{section}}
+  \setcounter{section}{0}
+  \renewcommand{\theHsection}{A\arabic{section}}}
+
 % END (sectioning)
 
 % TOC formatting
