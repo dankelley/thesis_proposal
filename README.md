@@ -40,6 +40,20 @@ email or by issuing a pull request on the github website
 **Dan Kelley, Dalhousie University Oceanography Graduate Coordinator 2009 to
 2017.** 
 
+## Configuration
+
+### University logo
+It is possible to put a university logo on the front page; with
+```latex
+\documentclass{thesis_proposal}
+```
+as the first line of a `.tex` file, then no logo will appear. However, the
+Dalhousie University logo (included in this repository) will appear on the
+first page if the file uses
+```latex
+\documentclass[logo=logo-eagle]{thesis_proposal}
+```
+
 ## Installation
 
 If you want to use the `thesis_proposal` package like any regular LaTeX package without

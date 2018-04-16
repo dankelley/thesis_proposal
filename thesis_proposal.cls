@@ -1,13 +1,12 @@
 %% This file 'thesis_proposal.cls', was written by Dan Kelley and
 %% is covered by the GPL open-source license.
 
-\def\tpversion{0.12}
-\def\fileversion{v0.12}
-\def\filedate{2010/02/02}
+\def\tpversion{0.13}
+\def\fileversion{v0.13}
+\def\filedate{2018/04/16}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{thesis_proposal}[\filedate\space\fileversion]
-\immediate\write16{Class file for students writing thesis proposals 
-  in the Department of Oceanography at Dalhousie University}
+\ProvidesPackage{thesis_proposal}[\filedate\space\fileversion]
+\immediate\write16{Class file for students writing thesis proposals}
 \def\filename{thesis_proposal.dtx}
 
 % Indicate style name at end of document
@@ -17,11 +16,12 @@
 \def\enddocument{\vfill\revtex@pageid\ltx@enddoc}
 
 
-\RequirePackage{setspace,fancyhdr,ifthen,graphicx}
+\RequirePackage{setspace,fancyhdr,ifthen,graphicx,kvoptions}
+\SetupKeyvalOptions{family=thesisproposal,prefix=thesisproposal@}
 
 %\RequirePackage{ifthen,times,xspace,hyperref,titlesec,titletoc,graphicx,fancyhdr}
 
-\newcommand{\dal@ptsize}{12pt}
+\newcommand{\thesisproposal@ptsize}{12pt}
 \newif\if@mainmatter        \@mainmattertrue
 \newif\if@title@page        \@title@pagetrue
 \newif\if@signature@page    \@signature@pagetrue
@@ -38,14 +38,18 @@
 \newif\if@draft@mode        \@draft@modefalse
 \newif\if@print@bib         \@print@bibtrue
 \newif\if@first@bibitem     \@first@bibitemtrue
-\DeclareOption{10pt}{\renewcommand{\dal@ptsize}{10pt}}
-\DeclareOption{11pt}{\renewcommand{\dal@ptsize}{11pt}}
-\DeclareOption{12pt}{} % \dal@ptsize already set to 12pt
+\DeclareOption{10pt}{\renewcommand{\thesisproposal@ptsize}{10pt}}
+\DeclareOption{11pt}{\renewcommand{\thesisproposal@ptsize}{11pt}}
+\DeclareOption{12pt}{} % \thesisproposal@ptsize already set to 12pt
+
+\DeclareStringOption{logo}
+\ProcessKeyvalOptions*
+
 \DeclareOption{draft}{\AtEndOfClass{\draft}
   \PassOptionsToClass{draft}{report}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions
-\LoadClass[\dal@ptsize]{report}
+\LoadClass[\thesisproposal@ptsize]{report}
 \setlength{\oddsidemargin}{-0.25in}
 \setlength{\evensidemargin}{-0.25in}
 \setlength{\topmargin}{-0.25in}
@@ -102,8 +106,8 @@
   \linespread{1}\normalsize
   \orig@thebibliography{#1}
   \else
-  \newbox\dal@bib@box
-  \newbox\dal@bibitem@box
+  \newbox\thesisproposal@bib@box
+  \newbox\thesisproposal@bibitem@box
   \let\b@group={
     \let\e@group=}
   \def\endthebibliography{\egroup\e@group}
@@ -114,9 +118,9 @@
     \else
     \egroup
     \fi
-    \setbox\dal@bibitem@box=\vbox\bgroup
+    \setbox\thesisproposal@bibitem@box=\vbox\bgroup
     \orig@bibitem}
-  \setbox\dal@bib@box=\vbox\b@group
+  \setbox\thesisproposal@bib@box=\vbox\b@group
   \orig@thebibliography{#1}
   \fi
 }
@@ -210,7 +214,7 @@
   {\def\\{ \ignorespaces}#1}%
 }
 
-% dal logo, partial fulfillment block
+% partial fulfillment block (possibly with a logo)
 
 % Abstract similar to Royal Society style
 \newsavebox{\keywords}
@@ -247,7 +251,12 @@
     % In fulfillment block
     \begin{center}
       \vskip 2pt plus 5pt minus 2pt
-      \includegraphics[scale=0.3]{logo-eagle}\par
+
+      % optionally insert a graphic for the university logo
+      \ifthenelse{\equal{\thesisproposal@logo}{}}%
+      {}%
+      {\includegraphics[scale=0.3]{\thesisproposal@logo}\par}
+
       \vskip 2pt plus 5pt minus 2pt
       Submitted in partial fulfillment of the requirements
       for the degree of \@degree,\par Department of Oceanography,
