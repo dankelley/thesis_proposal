@@ -42,7 +42,7 @@ email or by issuing a pull request on the github website
 
 ## Installation
 
-If you want to use the ocethesis package like any regular LaTeX package without
+If you want to use the `thesis_proposal` package like any regular LaTeX package without
 copying the provided style sheets into the directory of your document, you may
 install the package in a root path of your TeX distribution. The procedure
 depends on the operating system, and so some steps listed below are divided
@@ -79,7 +79,7 @@ on MacOS.
 At this stage, you are set up for doing work with Latex, and you will not need
 to repeat these steps for any later updates to the Dalhousie thesis style sheet.
 
-The next step is to clone the dal-oce-thesis repository. In the terminal, type
+The next step is to clone the `thesis_proposal` repository. In the terminal, type
 ```
 cd ~/texmf/tex/latex
 git clone https://github.com/dankelley/thesis_proposal.git thesis_proposal
@@ -94,12 +94,12 @@ on MacOS.
 Finally, set up the bibliography style sheet, with
 ```
 cd ~/texmf/bibtex/bst
-ln -s ../../tex/latex/oceproposal/thesis_proposal.bst .
+ln -s ../../tex/latex/thesis_proposal/thesis_proposal.bst .
 ```
 on Linux or
 ```
 cd ~/Library/texmf/bibtex/bst
-ln -s ../../tex/latex/oceproposal/thesis_proposal.bst .
+ln -s ../../tex/latex/thesis_proposal/thesis_proposal.bst .
 ```
 on MacOS.
 
@@ -109,15 +109,15 @@ on MacOS.
 You can test if your TeX distribution is able to find the class file and style
 sheets by typing in the terminal:
 ```
-kpsewhich oceproposal.cls
-kpsewhich oceproposal.bst
+kpsewhich thesis_proposal.cls
+kpsewhich thesis_proposal.bst
 ```
 and verifying that both commands report the full path to the respective files,
 as you've set them up.
 
 ## Updating the installation
 
-If `dal-oce-thesis` gets updated, you may update your installation by doing
+If `thesis_proposal` gets updated, you may update your installation by doing
 ```
 cd ~/texmf/tex/latex/thesis_proposal
 ```
