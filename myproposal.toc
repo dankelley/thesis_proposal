@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {1}Lorem ipsum}{1}{section.0.1}
-\contentsline {subsection}{\numberline {1.\hspace {0.1em}1}In reprehenderit}{1}{subsection.0.1.1}
-\contentsline {subsection}{\numberline {1.\hspace {0.1em}2}Dolor sit amet}{2}{subsection.0.1.2}
-\contentsline {subsubsection}{\numberline {1.\hspace {0.1em}2.1}Consectetur adipisicing}{3}{subsubsection.0.1.2.1}
-\contentsline {subsubsection}{\numberline {1.\hspace {0.1em}2.2}Sed do eiusmod}{3}{subsubsection.0.1.2.2}

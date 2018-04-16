@@ -1,3 +1,10 @@
 *latexmk
 *~
 *.swp
+myproposal.aux
+myproposal.blg
+myproposal.fls
+myproposal.log
+myproposal.out
+myproposal.pdf
+myproposal.toc
