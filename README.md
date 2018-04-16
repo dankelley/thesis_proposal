@@ -39,8 +39,10 @@ skills may wish to contribute improvements either by contacting the author by
 email or by issuing a pull request on the github website
 (https://github.com/dankelley/thesis_proposal/pulls).
 
-*Dan Kelley, Dalhousie University Oceanography Graduate Coordinator 2009 to
-2017.*
+**Authors**
+
+Dan Kelley (Professor) and Christoph Renkl (PhD Candidate), Department of
+Oceanography, Dalhousie University, Canada.
 
 **Configuration**
 
