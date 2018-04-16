@@ -46,17 +46,16 @@ Oceanography, Dalhousie University, Canada.
 
 **Configuration**
 
-*University logo*
-
-It is possible to put a university logo on the front page; with
+Read the comments in `myproposal.tex` to learn about things that you ought to
+set, e.g. alter the line
 ```latex
-\documentclass{thesis_proposal}
+\logofile{logo-eagle}
 ```
-as the first line of a `.tex` file, then no logo will appear. However, the
-Dalhousie University logo (included in this repository) will appear on the
-first page if the file uses
-```latex
-\documentclass[logo=logo-eagle]{thesis_proposal}
+to name another university logo, or delete the content between the braces, to
+prevent the drawing of a logo. Since logo sizes vary greatly, you will likely also
+want to edit the line that reads
+```latx
+\logoscale{0.8}
 ```
 
 **Installation**

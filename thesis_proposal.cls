@@ -42,8 +42,8 @@
 \DeclareOption{11pt}{\renewcommand{\thesisproposal@ptsize}{11pt}}
 \DeclareOption{12pt}{} % \thesisproposal@ptsize already set to 12pt
 
-\DeclareStringOption{logo}
-\ProcessKeyvalOptions*
+%\DeclareStringOption{logo}
+%\ProcessKeyvalOptions*
 
 \DeclareOption{draft}{\AtEndOfClass{\draft}
   \PassOptionsToClass{draft}{report}}
@@ -129,6 +129,8 @@
 \def\submitmip#1{\gdef\@submitmip{#1}}
 \def\submitdate#1{\gdef\@submitdate{#1}}
 \def\defenddate#1{\gdef\@defenddate{#1}}
+\def\logofile#1{\gdef\@logofile{#1} \typeout{*** logo file: \@logofile}}
+\def\logoscale#1{\gdef\@logoscale{#1} \typeout{*** logo scale: \@logoscale}}
 \def\acceptdate#1{\gdef\@acceptdate{#1}}
 \def\dept#1{\gdef\@dept{#1}}
 \def\supervisor#1{\gdef\@supervisor{#1}}
@@ -144,6 +146,8 @@
 
 \def\@title{}
 \def\@author{}
+%\def\@logofile{}
+%\def\@logoscale{}
 \def\@previousdegree{}
 \def\@supervisor{}
 \def\@cosupervisor{}
@@ -165,6 +169,10 @@
   \global\let\maketitle\relax
   \global\let\@maketitle\relax
   \global\let\@author\@empty
+  % FIXME: 2018 Apr 16: doing the next two commands prevents logo from
+  % FIXME appearing. I should look into this some more.
+  %% \global\let\@logofile\@empty
+  %% \global\let\@logoscale\@empty
   \global\let\@previousdegree\@empty
   \global\let\@submitdate\@empty
   \global\let\@submitmip\@empty
@@ -174,6 +182,8 @@
   \global\let\title\relax
   \global\let\author\relax
   \global\let\previousdegree\relax
+  \global\let\filelogo\relax
+  \global\let\scalelogo\relax
   \global\let\submitdate\relax
   \global\let\submitmip\relax
   \global\let\defenddate\relax
@@ -253,9 +263,9 @@
       \vskip 2pt plus 5pt minus 2pt
 
       % optionally insert a graphic for the university logo
-      \ifthenelse{\equal{\thesisproposal@logo}{}}%
+      \ifthenelse{\equal{\@logofile}{\@empty}}%
       {}%
-      {\includegraphics[scale=0.3]{\thesisproposal@logo}\par}
+      {\includegraphics[scale=\@logoscale]{\@logofile}\par}
 
       \vskip 2pt plus 5pt minus 2pt
       Submitted in partial fulfillment of the requirements
