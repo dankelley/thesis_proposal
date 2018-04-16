@@ -1,4 +1,5 @@
-library(projectplanning)
+library(plan)
 data(gantt)
-pdf("planning.pdf", width=10, height=4)
+if (!interactive()) pdf("planning.pdf", height=4, pointsize=10)
 plot(gantt)
+if (!interactive()) dev.off()
