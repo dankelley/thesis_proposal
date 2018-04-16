@@ -1696,4 +1696,4 @@ FUNCTION {end.bib}
 EXECUTE {end.bib}
 %% End of customized bst file
 %%
-%% End of file `ocethesis.bst'.
+%% End of file `thesis_proposal.bst'.
