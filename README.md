@@ -41,8 +41,11 @@ email or by issuing a pull request on the github website
 
 **Authors**
 
-Dan Kelley (Professor) and Christoph Renkl (PhD Candidate), Department of
-Oceanography, Dalhousie University, Canada.
+Dan Kelley (Professor; https://orcid.org/0000-0001-7808-5911)
+and
+Christoph Renkl (PhD Candidate),
+Department of Oceanography,
+Dalhousie University, Canada.
 
 **Configuration**
 
