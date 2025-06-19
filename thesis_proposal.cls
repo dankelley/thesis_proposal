@@ -1,9 +1,9 @@
 %% This file 'thesis_proposal.cls', was written by Dan Kelley and
 %% is covered by the GPL open-source license.
 
-\def\tpversion{0.13}
-\def\fileversion{v0.13}
-\def\filedate{2018/04/16}
+\def\tpversion{0.14}
+\def\fileversion{v0.14}
+\def\filedate{2025/06/19}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{thesis_proposal}[\filedate\space\fileversion]
 \immediate\write16{Class file for students writing thesis proposals}
@@ -11,7 +11,7 @@
 
 % Indicate style name at end of document
 \def\revtex@pageid{\xdef\@thefnmark{\null}
-  \@footnotetext{This document was prepared with the thesis\_proposal \LaTeX\/ macros, version \tpversion, available from Dan Kelley.}}
+  \@footnotetext{This document was prepared with the thesis\_proposal \LaTeX\/ macros, version \tpversion, available at https://github.com/dankelley/thesis\_proposal.}}
 \let\ltx@enddoc=\enddocument
 \def\enddocument{\vfill\revtex@pageid\ltx@enddoc}
 
@@ -41,6 +41,9 @@
 \DeclareOption{10pt}{\renewcommand{\thesisproposal@ptsize}{10pt}}
 \DeclareOption{11pt}{\renewcommand{\thesisproposal@ptsize}{11pt}}
 \DeclareOption{12pt}{} % \thesisproposal@ptsize already set to 12pt
+\newcommand{\tplinespread}{1.37}
+\DeclareOption{doublespace}{\renewcommand{\tplinespread}{2.0}}
+\DeclareOption{singlespace}{\renewcommand{\tplinespread}{1.0}}
 
 %\DeclareStringOption{logo}
 %\ProcessKeyvalOptions*
@@ -64,13 +67,13 @@
   \markright{}
 }
 \brokenpenalty=10000
-\linespread{1.37}\normalsize
-\renewenvironment{figure}{\linespread{1}\@float{figure}}{\end@float}
-\renewenvironment{figure*}{\linespread{1}\@dblfloat{figure}}{\end@dblfloat}
-\renewenvironment{table}{\linespread{1}\@float{table}}{\end@float}
-\renewenvironment{table*}{\linespread{1}\@dblfloat{table}}{\end@dblfloat}
+\linespread{\tplinespread}\normalsize
+\renewenvironment{figure}{\linespread{\tplinespread}\@float{figure}}{\end@float}
+\renewenvironment{figure*}{\linespread{\tplinespread}\@dblfloat{figure}}{\end@dblfloat}
+\renewenvironment{table}{\linespread{\tplinespread}\@float{table}}{\end@float}
+\renewenvironment{table*}{\linespread{\tplinespread}\@dblfloat{table}}{\end@dblfloat}
 \long\def\@footnotetext#1{\insert\footins{%
-    \linespread{1} % Set single-spacing
+    \linespread{\tplinespread} % Set single-spacing
     \reset@font\footnotesize
     \interlinepenalty\interfootnotelinepenalty
     \splittopskip\footnotesep
@@ -87,7 +90,7 @@
 \long\def\@mpfootnotetext#1{%
   \global\setbox\@mpfootins\vbox{%
     \unvbox\@mpfootins
-    \linespread{1} % Set single-spacing
+    \linespread{\tplinespread} % Set single-spacing
     \reset@font\footnotesize
     \hsize\columnwidth
     \@parboxrestore
@@ -103,7 +106,7 @@
   \if@print@bib
   \newpage
   \addcontentsline{toc}{chapter}{\bibname} %%%DEK%%% no effect
-  \linespread{1}\normalsize
+  \linespread{\tplinespread}\normalsize
   \orig@thebibliography{#1}
   \else
   \newbox\thesisproposal@bib@box
@@ -237,7 +240,7 @@
       \end{center}
     \end{minipage}
   }
-  \par\linespread{1}
+  \par\linespread{\tplinespread}
   \normalsize\noindent\ignorespaces {\bfseries Abstract:}
 }%
 {

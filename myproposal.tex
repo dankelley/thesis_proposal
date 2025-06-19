@@ -1,4 +1,6 @@
 \documentclass{thesis_proposal}
+%\documentclass[singlespace]{thesis_proposal}
+%\documentclass[doublespace]{thesis_proposal}
 
 % If you don't like the citation style you get with the above, try
 % uncommenting one of the following lines and using that instead.
@@ -92,7 +94,7 @@ culpa qui officia deserunt mollit anim id est laborum.
     \includegraphics[width=\hsize]{planning} % using a default suffix
   \end{center}
   \caption[Research timetable.]{\label{f:planning}Thesis timetable, created
-  with the data in Table~\ref{t:planningdata} using the R code in Table~\ref{t:planningR}}
+  with the data in Table~\ref{t:planningdata} using the R code in Table~\ref{t:planningR}. Oh, and here's some more text to make the caption longer, so we can test whether double spacing works ...}
 \end{figure}
 
 Referencing demonstrations:
@@ -167,7 +169,7 @@ deserunt mollit anim id est laborum.
     \caption{\label{t:planningR}Source code to create
       Figure~\ref{f:planning}, based on the data in
       Table~\ref{t:planningdata}.  This uses the R package
-      named \texttt{projectplanning}, which is available from Dan Kelley.}
+      named \texttt{plan}, which is available on CRAN.}
   \begin{verbatim}
 library(projectplanning)
 library(projectplanning)

@@ -29,7 +29,12 @@ After you have, ahem, figured out figures, you'll find it easy to do the rest.
 Just edit *myproposal.tex* and start filling in information where suggested,
 e.g. changing the string *(insert author name here)* to your name.
 
-Some options are available, and these are indicated in the sample file.
+Some options are available, and these are indicated in the sample file. In
+particular, please note the first 3 lines of that file.  The first will set the
+line spacing to 1.37, which the author thinks looks quite good. If you want
+single-spacing, comment out that line and remove the % character from line 2.
+Or, if you want double-spacing, comment out line 1 and remove the % from line
+3.
 
 Please note that this is an early version of the file, and so there are lots of
 possibilities for improvement. Please report problems and suggestions using the
